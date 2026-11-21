@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALL YONO GAMES 2028 - All New Yono Apps</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #222;
+      padding-bottom: 50px;
+    }
+
+    /* Top Stylish Header */
+    .top-header {
+      background: linear-gradient(90deg, #b80000 0%, #e60000 55%, #ff2e2e 100%);
+      color: #fff;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(230, 0, 0, 0.35);
+      border-bottom: 2px solid #ffd700;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid #ffd700;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.45);
+      background: #063b1c;
+    }
+
+    .brand-title {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffffff 0%, #ffe66d 55%, #ffd700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .menu-btn {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 215, 0, 0.5);
+      color: #fff;
+      font-size: 17px;
+      padding: 7px 11px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Navigation Bar (Home, About, Disclaimer only) */
+    .nav-bar {
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 8px;
+      border-bottom: 1px solid #e2e5ec;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 68px;
+      z-index: 999;
+    }
+
+    .nav-item {
+      color: #444;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 16px;
+      border-radius: 10px;
+      transition: 0.2s;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      flex: 1;
+    }
+
+    .nav-item i {
+      font-size: 16px;
+    }
+
+    .nav-item.active {
+      color: #e60000;
+      background: #fff0f0;
+      box-shadow: inset 0 -2px 0 #e60000;
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    /* Stylish Main Title */
+    .main-heading {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 900;
+      margin: 10px 0 14px;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, #d40000, #ff4500, #b80000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sub-badge {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 12px;
+      background: linear-gradient(90deg, #141e30, #243b55);
+      color: #ffd700;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+    }
+
+    /* Hero Gradient Box */
+    .hero-box {
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 45%, #00b4db 100%);
+      color: #fff;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 13px;
+      line-height: 1.58;
+      box-shadow: 0 5px 14px rgba(0, 180, 219, 0.25);
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    /* Category Tabs */
+    .tabs {
+      display: flex;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      margin-bottom: 18px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      background: #fff;
+      color: #555;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: 0.25s;
+    }
+
+    .tab-btn.active {
+      background: #e60000;
+      color: #fff;
+    }
+
+    /* App Card List */
+    .app-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .app-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      position: relative;
+      border: 1px solid #eceef2;
+    }
+
+    .rank-badge {
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      background: #e60000;
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(230, 0, 0, 0.4);
+    }
+
+    .app-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #eee;
+    }
+
+    .app-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .app-bonus {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #e60000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .app-withdraw {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .download-btn {
+      background: #0d0d0d;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      transition: 0.2s;
+    }
+
+    .download-btn:hover {
+      background: #e60000;
+    }
+
+    /* Dedicated Page Cards (About & Disclaimer) */
+    .page-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      border: 1px solid #eceef2;
+    }
+
+    .page-card h2 {
+      font-size: 19px;
+      color: #e60000;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .page-card p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .warning-banner {
+      background: #fff3cd;
+      border-left: 4px solid #e60000;
+      color: #664d03;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .feature-list li {
+      font-size: 13px;
+      color: #333;
+      padding: 7px 0;
+      border-bottom: 1px dashed #eee;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+
+    .feature-list li i.fa-check-circle {
+      color: #00a859;
+      margin-top: 2px;
+    }
+
+    .feature-list li i.fa-exclamation-circle {
+      color: #e60000;
+      margin-top: 2px;
+    }
+
+    /* Detailed Game Card inside About Page */
+    .about-game-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e6e9ef;
+    }
+
+    .about-game-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0f2f5;
+    }
+
+    .about-game-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .about-game-title img {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .about-game-title h3 {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    .about-game-title span {
+      font-size: 11px;
+      color: #e60000;
+      font-weight: 700;
+      display: block;
+    }
+
+    .about-game-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: #f1f4f9;
+      color: #222;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 6px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e60000;
+      color: #fff;
+      border: none;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 14px;
+    }
+
+    /* Helper class */
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Stylish Header -->
+  <header class="top-header">
+    <div class="brand" id="brand-home">
+      <img src="logo.png" alt="ALL YONO GAMES 2028 Logo" />
+      <span class="brand-title">ALL YONO GAMES 2028</span>
+    </div>
+    <button type="button" class="menu-btn" id="menu-about-btn" aria-label="Open About">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <button type="button" class="nav-item active" id="nav-home" data-page="home">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </button>
+    <button type="button" class="nav-item" id="nav-about" data-page="about">
+      <i class="fas fa-info-circle"></i>
+      <span>About</span>
+    </button>
+    <button type="button" class="nav-item" id="nav-disclaimer" data-page="disclaimer">
+      <i class="fas fa-exclamation-triangle"></i>
+      <span>Disclaimer</span>
+    </button>
+  </nav>
+
+  <!-- ==================== 1. HOME PAGE ==================== -->
+  <main class="container" id="page-home">
+    <span class="sub-badge">Trending Yono &amp; Rewards Directory</span>
+    <h1 class="main-heading">ALL YONO GAMES 2028</h1>
+
+    <!-- Hero Gradient Box -->
+    <div class="hero-box">
+      ALL YONO GAMES 2028 is a popular platform where players can explore a wide collection of real money gaming apps in one place. From rummy tables to slot spins and bingo games, users can enjoy multiple categories with daily rewards and instant withdrawal. This collection includes trending apps such as IND Club, Bingo 101, 123 Rummy, Joy Rummy, VIP Rummy, Yono Ocean, Jeet Spin, and Navi!
+    </div>
+
+    <h2 class="section-title">Download NEW YONO Games</h2>
+
+    <!-- Category Tabs -->
+    <div class="tabs">
+      <button type="button" class="tab-btn active" id="btn-new" data-tab="new">
+        <i class="fas fa-star"></i> New Games
+      </button>
+      <button type="button" class="tab-btn" id="btn-other" data-tab="other">
+        <i class="fas fa-gamepad"></i> Other Apps
+      </button>
+    </div>
+
+    <!-- NEW GAMES LIST (7 Games) -->
+    <div class="app-list" id="tab-new">
+
+      <!-- App 1: IND Club -->
+      <div class="app-card">
+        <span class="rank-badge">1</span>
+        <div class="app-left">
+          <img src="ind-club.png" alt="IND Club" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">IND Club</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹50</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://indclubjjj.com/?code=34UQAWK9GDW&t=1794975161" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+      <!-- App 2: Bingo 101 -->
+      <div class="app-card">
+        <span class="rank-badge">2</span>
+        <div class="app-left">
+          <img src="bingo-101.png" alt="Bingo 101" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">Bingo 101</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹30</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://bingo101dd.com/?code=6YFWGCX2RHG&t=1794975925" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+      <!-- App 3: 123 Rummy -->
+      <div class="app-card">
+        <span class="rank-badge">3</span>
+        <div class="app-left">
+          <img src="123-rummy.png" alt="123 Rummy" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">123 Rummy</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹50</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://www.123rummy20.com/?code=HT9WAKA7HL7&t=1794977496" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+      <!-- App 4: Joy Rummy -->
+      <div class="app-card">
+        <span class="rank-badge">4</span>
+        <div class="app-left">
+          <img src="joy-rummy.png" alt="Joy Rummy" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">Joy Rummy</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹30</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://www.joyrummyworld.com/?code=J5K3635AFCW&t=1794977809" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+      <!-- App 5: VIP Rummy -->
+      <div class="app-card">
+        <span class="rank-badge">5</span>
+        <div class="app-left">
+          <img src="vip-rummy.png" alt="VIP Rummy" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">VIP Rummy</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹50</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://viprummy4.com/?code=XSDQUFK8PX1&t=1794978038" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+      <!-- App 6: Yono Ocean -->
+      <div class="app-card">
+        <span class="rank-badge">6</span>
+        <div class="app-left">
+          <img src="yono-ocean.png" alt="Yono Ocean" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">Yono Ocean</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹50</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://yonoocean.com?campcode=REFER-MDL1GQ5I2PQ08&source=refer_earn&t=1795093245&channel=whatsap" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+      <!-- App 7: Jeet Spin -->
+      <div class="app-card">
+        <span class="rank-badge">7</span>
+        <div class="app-left">
+          <img src="jeet-spin.png" alt="Jeet Spin" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">Jeet Spin</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> Sign Up Bonus ₹50</div>
+            <div class="app-withdraw"><i class="fas fa-wallet"></i> Min. Withdraw ₹100</div>
+          </div>
+        </div>
+        <a href="https://www.jeetspin29.com/?code=SYH5AKQUX1C&t=1794979548" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+
+    </div>
+
+    <!-- OTHER APPS LIST (Navi) -->
+    <div class="app-list hidden" id="tab-other">
+      <div class="app-card">
+        <span class="rank-badge">1</span>
+        <div class="app-left">
+          <img src="navi.png" alt="Navi" class="app-icon" />
+          <div class="app-info">
+            <div class="app-name">Navi</div>
+            <div class="app-bonus"><i class="fas fa-gift"></i> 1st Payment ₹10 Free</div>
+            <div class="app-withdraw"><i class="fas fa-ticket-alt"></i> Coupon 100 Coin Free</div>
+          </div>
+        </div>
+        <a href="https://g.navi.com/" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== 2. ABOUT PAGE ==================== -->
+  <section class="container hidden" id="page-about">
+    <button type="button" class="back-btn" data-page="home">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </button>
+
+    <div class="page-card">
+      <h2><i class="fas fa-gamepad"></i> About ALL YONO GAMES 2028</h2>
+      <p>
+        <strong>ALL YONO GAMES 2028</strong> ek gaming directory platform hai jahan aapko sabhi listed Yono, Rummy, Bingo, Slot Spin, aur Rewards apps ki jaankari aur links ek hi jagah milte hain.
+      </p>
+      <p>
+        Yono Series ke games welcome bonus, daily offers, variety of game modes, aur UPI/bank withdrawal options ke liye jaane jaate hain. Naye users register karke bonus aur app features check kar sakte hain.
+      </p>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> <strong>Sign-Up Bonus:</strong> Har app par alag-alag welcome bonus (₹30 se ₹50 tak).</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Minimum Withdrawal:</strong> Aksar games mein ₹100 minimum withdrawal limit hoti hai.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Multiple Game Modes:</strong> Rummy, Slots, Bingo, aur spin-style games.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Refer &amp; Earn:</strong> Referral links ke zariye bonus aur commission ka option.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">All Listed Games Full Details</h2>
+
+    <!-- 1. IND Club -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="ind-club.png" alt="IND Club" />
+          <div>
+            <h3>1. IND Club</h3>
+            <span>Bonus: ₹50 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://indclubjjj.com/?code=34UQAWK9GDW&t=1794975161" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>IND Club</strong> ek Yono series gaming app hai jisme register karne par <strong>₹50 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> milta hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹50</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 2. Bingo 101 -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="bingo-101.png" alt="Bingo 101" />
+          <div>
+            <h3>2. Bingo 101</h3>
+            <span>Bonus: ₹30 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://bingo101dd.com/?code=6YFWGCX2RHG&t=1794975925" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>Bingo 101</strong> Bingo aur casual/spin games ke liye jaana jaata hai. Isme <strong>₹30 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> diya gaya hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹30</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 3. 123 Rummy -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="123-rummy.png" alt="123 Rummy" />
+          <div>
+            <h3>3. 123 Rummy</h3>
+            <span>Bonus: ₹50 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://www.123rummy20.com/?code=HT9WAKA7HL7&t=1794977496" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>123 Rummy</strong> ek Rummy gaming app hai jahan naye users ko <strong>₹50 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> milta hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹50</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 4. Joy Rummy -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="joy-rummy.png" alt="Joy Rummy" />
+          <div>
+            <h3>4. Joy Rummy</h3>
+            <span>Bonus: ₹30 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://www.joyrummyworld.com/?code=J5K3635AFCW&t=1794977809" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>Joy Rummy</strong> mein Rummy aur other games ke saath <strong>₹30 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> ki jaankari di gayi hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹30</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 5. VIP Rummy -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="vip-rummy.png" alt="VIP Rummy" />
+          <div>
+            <h3>5. VIP Rummy</h3>
+            <span>Bonus: ₹50 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://viprummy4.com/?code=XSDQUFK8PX1&t=1794978038" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>VIP Rummy</strong> mein <strong>₹50 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> diya gaya hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹50</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 6. Yono Ocean -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="yono-ocean.png" alt="Yono Ocean" />
+          <div>
+            <h3>6. Yono Ocean</h3>
+            <span>Bonus: ₹50 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://yonoocean.com?campcode=REFER-MDL1GQ5I2PQ08&source=refer_earn&t=1795093245&channel=whatsap" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>Yono Ocean</strong> ek Yono platform app hai jisme <strong>₹50 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> milta hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹50</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 7. Jeet Spin -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="jeet-spin.png" alt="Jeet Spin" />
+          <div>
+            <h3>7. Jeet Spin</h3>
+            <span>Bonus: ₹50 | Min. Withdraw: ₹100</span>
+          </div>
+        </div>
+        <a href="https://www.jeetspin29.com/?code=SYH5AKQUX1C&t=1794979548" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>Jeet Spin</strong> spin/slot-style app hai jisme <strong>₹50 Sign-Up Bonus</strong> aur <strong>₹100 Minimum Withdrawal</strong> diya gaya hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Bonus: ₹50</span>
+        <span class="tag">Min Withdraw: ₹100</span>
+      </div>
+    </div>
+
+    <!-- 8. Navi -->
+    <div class="about-game-card">
+      <div class="about-game-header">
+        <div class="about-game-title">
+          <img src="navi.png" alt="Navi" />
+          <div>
+            <h3>8. Navi</h3>
+            <span>1st Payment ₹10 Free | Coupon 100 Coin Free</span>
+          </div>
+        </div>
+        <a href="https://g.navi.com/" target="_blank" rel="noopener noreferrer" class="download-btn">
+          <i class="fas fa-download"></i> Get App
+        </a>
+      </div>
+      <p class="about-game-desc">
+        <strong>Navi</strong> app par <strong>1st Payment ₹10 Free</strong> aur <strong>Coupon 100 Coin Free</strong> ka offer diya gaya hai.
+      </p>
+      <div class="about-tags">
+        <span class="tag">1st Payment ₹10 Free</span>
+        <span class="tag">Coupon 100 Coin Free</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. DISCLAIMER PAGE ==================== -->
+  <section class="container hidden" id="page-disclaimer">
+    <button type="button" class="back-btn" data-page="home">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </button>
+
+    <div class="page-card">
+      <h2><i class="fas fa-exclamation-triangle"></i> Disclaimer — Real Money &amp; Satta / Betting Risk</h2>
+
+      <div class="warning-banner">
+        Chetavni: Is website par dikhaye gaye kayi games paise / chance / sattebaazi (betting / real-money gaming) se jude ho sakte hain. Inme paisa haarna aur aadat lagne ka khatra rehta hai.
+      </div>
+
+      <p>
+        <strong>ALL YONO GAMES 2028</strong> keval jaankari aur referral/listing ke uddeshya se banaya gaya hai. Hum kisi bhi app ke malik, operator, ya payment/withdrawal guarantor nahi hain.
+      </p>
+
+      <ul class="feature-list">
+        <li>
+          <i class="fas fa-exclamation-circle"></i>
+          <div><strong>Financial &amp; Satta Risk:</strong> Paise lagakar khele jaane wale games ya sattebaazi jaise modes mein nuksan ho sakta hai. Jitna paisa aap aaram se kho sakte hain, usse zyada kabhi na lagayein.</div>
+        </li>
+        <li>
+          <i class="fas fa-exclamation-circle"></i>
+          <div><strong>18+ Age Limit:</strong> Ye apps keval 18 saal ya usse badi umar ke logon ke liye hain. 18 saal se kam umar ke log inhe na khelein.</div>
+        </li>
+        <li>
+          <i class="fas fa-exclamation-circle"></i>
+          <div><strong>State &amp; Legal Rules:</strong> Bharat ke kuch rajyon mein online real-money gaming ya betting/sattebaazi par pabandi ya sakht niyam ho sakte hain. Apne state ke kanoon ke mutabik hi faisla lein.</div>
+        </li>
+        <li>
+          <i class="fas fa-exclamation-circle"></i>
+          <div><strong>Bonus &amp; Withdrawal Terms:</strong> Sign-up bonus, wagering conditions, aur minimum withdrawal (jaise ₹100) har app ke niyamon aur samay ke saath badal sakte hain.</div>
+        </li>
+        <li>
+          <i class="fas fa-exclamation-circle"></i>
+          <div><strong>Addiction Alert:</strong> Agar aapko ya kisi jaanne wale ko lagatar khelne ya paise bharne ki aadat pad rahi hai, toh turant break lein.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const pageIds = ['home', 'about', 'disclaimer'];
+
+      function showPage(targetPage) {
+        pageIds.forEach(function (name) {
+          const section = document.getElementById('page-' + name);
+          const navBtn = document.getElementById('nav-' + name);
+          if (section) {
+            if (name === targetPage) {
+              section.classList.remove('hidden');
+            } else {
+              section.classList.add('hidden');
+            }
+          }
+          if (navBtn) {
+            if (name === targetPage) {
+              navBtn.classList.add('active');
+            } else {
+              navBtn.classList.remove('active');
+            }
+          }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function showTab(targetTab) {
+        const newTab = document.getElementById('tab-new');
+        const otherTab = document.getElementById('tab-other');
+        const btnNew = document.getElementById('btn-new');
+        const btnOther = document.getElementById('btn-other');
+
+        if (targetTab === 'new') {
+          newTab.classList.remove('hidden');
+          otherTab.classList.add('hidden');
+          btnNew.classList.add('active');
+          btnOther.classList.remove('active');
+        } else {
+          newTab.classList.add('hidden');
+          otherTab.classList.remove('hidden');
+          btnNew.classList.remove('active');
+          btnOther.classList.add('active');
+        }
+      }
+
+      document.querySelectorAll('[data-page]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          const page = el.getAttribute('data-page');
+          if (page) showPage(page);
+        });
+      });
+
+      document.getElementById('brand-home').addEventListener('click', function () {
+        showPage('home');
+      });
+
+      document.getElementById('menu-about-btn').addEventListener('click', function () {
+        showPage('about');
+      });
+
+      document.getElementById('btn-new').addEventListener('click', function () {
+        showTab('new');
+      });
+
+      document.getElementById('btn-other').addEventListener('click', function () {
+        showTab('other');
+      });
+    })();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+= [
+      {
+        name: "Hi Rummy",
+        image: "hi-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "",
+        category: "rummy"
+      },
+      {
+        name: "Rumble Rummy",
+        image: "rumble-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.rumblerummy222.net/?code=UC0GRH1G66R&t=1795189546",
+        category: "rummy"
+      },
+      {
+        name: "Love Rummy",
+        image: "love-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.loverummy7.com/?code=AFCP25BQKSW&t=1795189702",
+        category: "rummy"
+      },
+      {
+        name: "Rummy Ludo",
+        image: "rummy-ludo.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://realbetslots.com/?code=WZTJQVKJVV9&t=1795189737",
+        category: "rummy"
+      },
+      {
+        name: "123 Rummy",
+        image: "123-rummy-777.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.123rummy38.com/?code=HT9GJ46X5L6&t=1795189922",
+        category: "rummy"
+      },
+      {
+        name: "Share Slots",
+        image: "share-slots.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://share277.com/?code=YAZZJ49CJJN&t=1795189982",
+        category: "slots"
+      },
+      {
+        name: "Spin 101",
+        image: "spin-101.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://spin101.life/?code=P4CUXTC23UE&t=1795190044",
+        category: "slots"
+      },
+      {
+        name: "Spin 777",
+        image: "spin-777.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://spin777ff.com/?code=7V9CVN3RPRQ&t=1795190100",
+        category: "slots"
+      },
+      {
+        name: "Club INR",
+        image: "club-inr.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://clubinr2.top/?code=9VCJKPLNFRV&t=1795190186",
+        category: "yono"
+      },
+      {
+        name: "Game Rummy",
+        image: "game-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://gamerummyc.com/?code=Q6W31TLK2Y8&t=1795190253",
+        category: "rummy"
+      },
+      {
+        name: "Saga Slots",
+        image: "saga-slots.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.sagaslots4.com/?code=0QHAYHXFN8K&t=1795190342",
+        category: "slots"
+      },
+      {
+        name: "567 Slots",
+        image: "567-slots.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://join567slots.com/?code=WTPMATKBHAP&t=1795190422",
+        category: "slots"
+      },
+      {
+        name: "Top Rummy",
+        image: "top-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://spinrummy.co/?code=7K9JBPG6PBX&t=1795190473",
+        category: "rummy"
+      },
+      {
+        name: "MBMbet",
+        image: "mbmbet.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.mbmbet6.com/?code=GD3E8SB119J&t=1795190577",
+        category: "yono"
+      },
+      {
+        name: "Jaiho Win",
+        image: "jaiho-win.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.jaihowin11.com/?code=1XNC2JKUCTC&t=1795190629",
+        category: "yono"
+      },
+      {
+        name: "Indslots",
+        image: "indslots.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.indslotsrewards.com/?code=T2Q4TH9YFZV&t=1795190703",
+        category: "slots"
+      },
+      {
+        name: "Neta.VIP",
+        image: "neta-vip.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://neta5.vip/?code=DR0697E4T6Z&t=1795190788",
+        category: "yono"
+      },
+      {
+        name: "789 Jackpots",
+        image: "789-jackpots.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://join789jackpots.cc/?code=8KFGNL8VANC&t=1795190870",
+        category: "yono"
+      },
+      {
+        name: "Win Rummy",
+        image: "win-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.winrummy47.com/?code=8JTK3WMDZU6&t=1795190934",
+        category: "rummy"
+      },
+      {
+        name: "RUMMY91",
+        image: "rummy91.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.rummy91ww.com/?code=4KTBRWBYUCV&t=1795191001",
+        category: "rummy"
+      },
+      {
+        name: "ABC Rummy",
+        image: "abc-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://www.abcrummy7.com/?code=75CFY4EKXSQ&t=1795191076",
+        category: "rummy"
+      },
+      {
+        name: "Slots Spin",
+        image: "slots-spin.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://slotsspinn.com/?code=XJBMESCQDB5&t=1795191109",
+        category: "slots"
+      },
+      {
+        name: "Spin Winner",
+        image: "spin-winner.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://ajspinwinner.com/?code=QVTGNRV2GGX&t=1795191197",
+        category: "slots"
+      },
+      {
+        name: "IND Rummy",
+        image: "ind-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://slotsfre.net/?code=2BAZ3J8CBEF&t=1795191258",
+        category: "rummy"
+      },
+      {
+        name: "Rummy888",
+        image: "rummy888.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://rummy888vip32.com/?code=7WT8191HZ3J&t=1795191336",
+        category: "rummy"
+      },
+      {
+        name: "YONO ARCADE",
+        image: "yono-arcade.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://yonoreferral2.com/?code=96LGHJUG3NM&t=1795191384",
+        category: "yono"
+      },
+      {
+        name: "Spin Gold",
+        image: "spin-gold.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://spingoldagents.net/?code=HLTE59U1L3H&t=1795191450",
+        category: "slots"
+      },
+      {
+        name: "JAIHO SPIN",
+        image: "jaiho-spin.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://rummyzipaa.com/?code=C0BQFTMWQX6&t=1795191540",
+        category: "yono"
+      },
+      {
+        name: "YONO777",
+        image: "yono777.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://yono777register2026.com/?code=F9MGTZE8PLS&t=1795191572",
+        category: "yono"
+      },
+      {
+        name: "SLOTS WINNER HUB",
+        image: "slots-winner-hub.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://slotswinnerc.com/?code=K4EVR7ZJ1GN&t=1795191651",
+        category: "slots"
+      },
+      {
+        name: "INR Rummy",
+        image: "inr-rummy.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://inrrummyvip1.one/?code=JMQCNMFDVGP&t=1795191677",
+        category: "rummy"
+      },
+      {
+        name: "JAIHO SLOTS",
+        image: "jaiho-slots.png",
+        bonus: "₹50",
+        withdraw: "₹100",
+        link: "https://f28d92dm.jaihogate.com/?code=EGPNWVTKJ8J&t=1795191749",
+        category: "yono"
+      }
+    ];
+    

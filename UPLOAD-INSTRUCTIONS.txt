@@ -1,0 +1,11 @@
+MULTI-PAGE WEBSITE UPDATE
+
+1. Keep your existing image files (logo.png, favicon.png, and all app PNG files) in the repository root.
+2. Upload/replace index.html from this package at the repository root.
+3. Upload every app folder (for example hi-rummy/, ind-club/) to the repository root, preserving folder names and each folder's index.html.
+4. Upload sitemap.xml and robots.txt to the repository root.
+5. Commit changes and wait for GitHub Pages deployment.
+6. Test a page such as https://yonogame2028.online/hi-rummy/ .
+7. Submit https://yonogame2028.online/sitemap.xml in Google Search Console.
+
+This package contains 40 app pages generated from the supplied index.html data. Image assets were not included because they were not part of the supplied HTML file; keep your existing image files in the repository root. Google indexing and search display are not guaranteed.
